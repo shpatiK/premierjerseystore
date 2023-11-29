@@ -1,4 +1,4 @@
-.navibar {
+  .navibar {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -28,6 +28,7 @@ nav ul {
 nav li {
     margin: 0;
     padding: 15px;
+    margin-right: 15px; 
 }
 
 nav a {
@@ -39,7 +40,7 @@ nav a:hover {
     text-decoration: underline;
 }
 
-.bgfoto{
+.bgfoto {
     background-image: url(banneri1.png);
     display: flex;
     justify-content: center;
@@ -51,20 +52,79 @@ nav a:hover {
     background-position: center; 
     margin-top: 10px;
     position: inherit;
-  }
+}
 
-  .search-container {
+.search-container {
     display: flex;
-    margin-right: 15px; 
-    padding-left: 50%;
+    justify-content: flex;
+    align-items:center;
+    margin-top: 20px;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+.search-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.search-container img {
+    width: 20px; 
+    height: 20px; 
+}
+
+.search-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #333; 
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.search-button:hover::before {
+    opacity: 1;
+}
+
+.discount-banner {
+    text-align: center;
+    padding: 30px;
+    background-color: #f2f2f2; 
+    border: 2px solid #333; 
+}
+
+.discount-banner p {
+    margin: 0; 
+    font-size: 20px;
+    color: #333;
+}
+.logoja{
+    display: flex;
+    width: 200px; 
+    height: 120px;
+    
+    
+}
+
+
+.returnandship {
+    display: flex;
     justify-content: flex-end;
-}
-
-.search-container input {
-    padding: 10px;
-    margin-right: 5px;
-}
-
-.search-container button {
-    padding: 10px;
+    align-items: flex-start; 
+    height: 150px;
+    width: 100px;
+    position: absolute;
+    top: 10px; 
+    right: 10px; 
+    margin-top: 15px;
+    z-index: 1;
 }
