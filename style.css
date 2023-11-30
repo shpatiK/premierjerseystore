@@ -1,4 +1,9 @@
-  .navibar {
+
+/*Navigation-bar*/
+
+.navibar {
+    display: flex;
+
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -13,8 +18,8 @@ header {
 
 nav {
     display: flex;
-    justify-content: flex-start;
-    background-color: #444;
+    justify-content: space-between;
+    background-color: #000000;
     overflow: hidden;
 }
 
@@ -40,6 +45,19 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/*Log in forma*/ 
+
+.profile-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    margin-right: 10px;
+    margin-top: 3px;
+    margin-bottom: 1px;
+}
+
+/*Foto e backgroundit*/
+
 .bgfoto {
     background-image: url(foto/banneri1.png);
     display: flex;
@@ -58,6 +76,8 @@ nav a:hover {
     display: flex;
     justify-content: center;
 }
+
+/*Search bar*/
 
 .search-container {
     display: flex;
@@ -132,7 +152,6 @@ input {
     display: flex;
     justify-content: flex-end;
     align-items: flex-start; 
-    height: 150px;
     width: 100px;
     position: absolute;
     top: 10px; 
@@ -144,6 +163,8 @@ input {
 .container div{
     width: 80%;
 }
+
+/*Produktet*/
 
 .product-container {
     display: flex;
