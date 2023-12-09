@@ -72,3 +72,36 @@ document.addEventListener('DOMContentLoaded', function () {
         validateForm();
     });
 });
+
+
+        function goToHome() {
+          window.location.href = 'index.html';
+        }
+    
+
+        document.addEventListener('DOMContentLoaded', function() {
+          const discountCodePhoto = document.getElementById('discountCodePhoto');
+          const discountCodeModal = document.getElementById('discountCodeModal');
+          const closeDiscountCodeModal = document.getElementById('closeDiscountCodeModal');
+        
+          
+          discountCodePhoto.addEventListener('click', function() {
+            discountCodeModal.style.display = 'block';
+          });
+        
+          closeDiscountCodeModal.addEventListener('click', function() {
+            discountCodeModal.style.display = 'none';
+          });
+        
+          window.addEventListener('click', function(event) {
+            if (event.target === discountCodeModal) {
+              discountCodeModal.style.display = 'none';
+            }
+          });
+        });
+        
+
+      
+        
+    
+
