@@ -10,6 +10,7 @@
 
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<script src="script.js"></script>
 
 </head>
 <body>
@@ -40,8 +41,8 @@
 
     <ul>
       
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Kits</a></li>
+      <li><a href="#" onclick="goToHome()">Home</a></li>
+      <li><a href="kits.html">Kits</a></li>
       <li><a href="#">Apparel&Gear</a></li>
       <li><a href="#">Special offers</a></li>
     </ul>
@@ -51,19 +52,29 @@
             <img src="foto/profile-icon.png" alt="Profile" width="50px" height="50px" style="border-radius: 50%"/>
         </a>
       </div>
-   
-  
+      
   </nav>
+  <div class="discount-code" id="discountCodeContainer">
+    <img src="foto/discountcode.png" alt="Your Photo" id="discountCodePhoto" class="clickable-photo">
+  </div>
+  
+  <div class="modal" id="discountCodeModal">
+    <span class="close" id="closeDiscountCodeModal">&times;</span>
+    <img src="foto/dc.png" alt="Your Photo" class="modal-content">
+    
+    </div>
+  </div>
 
-  <div class="discount-code ">
-    <img src="foto/discountcode.png" alt="kodi UBT">
-  </div>
-  </div>
+  
 </container>
+
+
 
   <div class="bgfoto" >
     
 </div>
+
+<h1 class="custom-heading">Now trending</h1>
 
 
 <div class="product-container">
@@ -109,6 +120,7 @@
   <p>Price: $89.99</p>
   <button>Add to Cart</button>
 </div>
+
 
 
 <footer>
