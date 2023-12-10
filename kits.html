@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <script src="script.js"></script>
   <title>Kits Page</title>
 </head>
@@ -11,17 +12,9 @@
     <container>
         <div class="logoja" >
         
-            <img src="foto/logo.png.png" alt="logoja" >
+            <img src="foto/logo.png.png" alt="logoja" onclick="goToHome()" >
         
-            <div class="search-container">
-        
-              <input type="text" placeholder="Search...">
-              <button type="submit" class="search-button">
-                <img src="foto/searchicon.png" alt="Search Icon">
-        
-              </button>
-        
-            </div>
+            
         
         </div>
 
@@ -36,11 +29,20 @@
 
             <ul>
               
-              <li><a href="#" onclick="goToHome()">Home</a></li>
+              <li><a href="index.html">Home</a></li>
               <li><a href="kits.html">Kits</a></li>
               <li><a href="#">Apparel&Gear</a></li>
               <li><a href="#">Special offers</a></li>
             </ul>
+            <div class="search-container">
+        
+              <input type="text" placeholder="Search...">
+              <button type="submit" class="search-button">
+                <img src="foto/searchicon.png" alt="Search Icon">
+        
+              </button>
+        
+            </div>
 
         <div class="profile-icon">
             <a href="loginForm.html" target="_blank">
@@ -50,10 +52,13 @@
           
       </nav>
     
+    
+    </container>
+    
 
-      <div class="discount-code" id="discountCodeContainer">
+      <!--<div class="discount-code" id="discountCodeContainer">
         <img src="foto/discountcode.png" alt="Your Photo" id="discountCodePhoto" class="clickable-photo">
-      </div>
+      </div>-->
       
       <div class="modal" id="discountCodeModal">
         <span class="close" id="closeDiscountCodeModal">&times;</span>
@@ -62,21 +67,21 @@
         </div>
       </div>
     
-    </container>
+    
 
     <div class="product-container">
         <div class="product">
-          <img src="foto/home kits/manutdhome.png" alt="Manchester United Jersey">
+          <img src="foto/home kits/manutdhome.png" alt="Manchester United Jersey" onclick="showProductDetails('foto/home kits/manutdhome.png','Manchester United adidas Home Shirt 2023-24', '$89.99')">
           <h2>Manchester United</h2>
           <p>Manchester United adidas Home Shirt 2023-24
           </p>
           <p>Price: $89.99</p>
-          <button>Add to Cart</button>
+          <button onclick="showProductDetails('foto/home kits/manutdhome.png','Manchester United adidas Home Shirt 2023-24', '$89.99')">Add to Cart</button>
         </div>
         
         <div class="product">
         
-          <img src="foto/third kits/arsenalthirdkit.png" alt="Arsenal Jersey">
+          <img src="foto/third kits/arsenalthirdkit.png" alt="Arsenal Jersey" onclick="showProductDetails('foto/third kits/arsenalthirdkit.png','Arsenal adidas Third Shirt 2023-24', '$89.99')">
         
           <h2>Arsenal </h2>
           <p>Arsenal adidas Third Shirt 2023-24
@@ -84,172 +89,172 @@
             <br>
           </p>
           <p>Price: $89.99</p>
-          <button>Add to Cart</button>
+          <button onclick="showProductDetails('foto/third kits/arsenalthirdkit.png','Arsenal adidas Third Shirt 2023-24', '$89.99')">View Product</button>
         </div>
         
         <div class="product">
-          <img src="foto/away kits/mancityaway.png" alt="|Manchester C Jersey">
+          <img src="foto/away kits/mancityaway.png" alt="|Manchester C Jersey" onclick="showProductDetails('foto/away kits/mancityaway.png','anchester City Puma Away Shirt 2023-24', '$59.99')">
           <h2>Manchester City </h2>
           <p>Manchester City Puma Away Shirt 2023-24
           </p>
-          <p>Price: $89.99</p>
-          <button>Add to Cart</button>
+          <p>Price: $59.99</p>
+          <button onclick="showProductDetails('foto/away kits/mancityaway.png','anchester City Puma Away Shirt 2023-24', '$59.99')">View Product</button>
         </div>
         
         <div class="product">
         
-          <img src="foto/third kits/liverpoolthird.png" alt="Liverpool 3 Jersey">
+          <img src="foto/third kits/liverpoolthird.png" alt="Liverpool 3 Jersey" onclick="showProductDetails('foto/third kits/liverpoolthird.png','Liverpool Nike 3rd Stadium Shirt 2023-24', '$89.99')">
         
           <h2>Liverpool </h2>
         
           <p>Liverpool Nike 3rd Stadium Shirt 2023-24
           </p>
           <p>Price: $89.99</p>
-          <button>Add to Cart</button>
+          <button onclick="showProductDetails('foto/third kits/liverpoolthird.png','Liverpool Nike 3rd Stadium Shirt 2023-24', '$89.99')">View Product</button>
         </div>
 
         <div class="product">
         
-            <img src="foto/home kits/chelseahome.png" alt="Chelsea Home">
+            <img src="foto/home kits/chelseahome.png" alt="Chelsea Home" onclick="showProductDetails('foto/home kits/chelseahome.png','Chelsea Nike Home Stadium Shirt 2023-24', '$89.99')">
           
             <h2>Chelsea </h2>
           
             <p>Chelsea Nike Home Stadium Shirt 2023-24
             </p>
             <p>Price: $89.99</p>
-            <button>Add to Cart</button>
+            <button onclick="showProductDetails('foto/home kits/chelseahome.png','Chelsea Nike Home Stadium Shirt 2023-24', '$89.99')">View Product</button>
           </div>
 
           <div class="product">
         
-            <img src="foto/home kits/tottenhamhome.png" alt="Tottenham  Jersey">
+            <img src="foto/home kits/tottenhamhome.png" alt="Tottenham  Jersey" onclick="showProductDetails('foto/home kits/tottenhamhome.png','Tottenham Nike Home Stadium Shirt 2023-24', '$89.99')">
           
             <h2>Tottenham </h2>
           
             <p>Tottenham Nike Home Stadium Shirt 2023-24
             </p>
             <p>Price: $89.99</p>
-            <button>Add to Cart</button>
+            <button onclick="showProductDetails('foto/home kits/tottenhamhome.png','Tottenham Nike Home Stadium Shirt 2023-24', '$89.99')">View Product</button>
           </div>
 
           <div class="product">
         
-            <img src="foto/home kits/aston-villahome.png" alt="Aston villa Jersey">
+            <img src="foto/home kits/aston-villahome.png" alt="Aston villa Jersey" onclick="showProductDetails('foto/home kits/aston-villahome.png','Aston Villa Castore Home Stadium Shirt 2023-24', '$59.99')">
           
             <h2>Aston Villa </h2>
           
             <p>Aston Villa Castore Home Stadium Shirt 2023-24
             </p>
-            <p>Price: $89.99</p>
-            <button>Add to Cart</button>
+            <p>Price: $59.99</p>
+            <button onclick="showProductDetails('foto/home kits/aston-villahome.png','Aston Villa Castore Home Stadium Shirt 2023-24', '$59.99')">View Product</button>
           </div>
 
           <div class="product">
         
-            <img src="foto/away kits/newcastleaway.png" alt="Newcastle 2 Jersey">
+            <img src="foto/away kits/newcastleaway.png" alt="Newcastle 2 Jersey" onclick="showProductDetails('foto/away kits/newcastleaway.png','Newcastle Castore Away Stadium Shirt 2023-24', '$59.99')">
           
             <h2>Newcastle </h2>
           
             <p>Newcastle Castore Away Stadium Shirt 2023-24
             </p>
-            <p>Price: $89.99</p>
-            <button>Add to Cart</button>
+            <p>Price: $59.99</p>
+            <button onclick="showProductDetails('foto/away kits/newcastleaway.png','Newcastle Castore Away Stadium Shirt 2023-24', '$59.99')">View Product</button>
           </div>
 
           <div class="product">
         
-            <img src="foto/away kits/tottenhamaway.png" alt="Tottenham  Jersey">
+            <img src="foto/away kits/tottenhamaway.png" alt="Tottenham  Jersey" onclick="showProductDetails('foto/away kits/tottenhamaway.png','Tottenham Nike Away Stadium Shirt 2023-24', '$89.99')">
           
             <h2>Tottenham </h2>
           
             <p>Tottenham Nike Away Stadium Shirt 2023-24
             </p>
             <p>Price: $89.99</p>
-            <button>Add to Cart</button>
+            <button onclick="showProductDetails('foto/away kits/tottenhamaway.png','Tottenham Nike Away Stadium Shirt 2023-24', '$89.99')">View Product</button>
           </div>
 
           <div class="product">
         
-            <img src="foto/home kits/newcastlehome.png" alt="Newcastle  Jersey">
+            <img src="foto/home kits/newcastlehome.png" alt="Newcastle  Jersey" onclick="showProductDetails('foto/home kits/newcastlehome.png','Newcastle Castore Home Stadium Shirt 2023-24', '$59.99')">
           
             <h2>Newcastle </h2>
           
             <p>Newcastle Castore Home Stadium Shirt 2023-24
             </p>
-            <p>Price: $89.99</p>
-            <button>Add to Cart</button>
+            <p>Price: $59.99</p>
+            <button onclick="showProductDetails('foto/home kits/newcastlehome.png','Newcastle Castore Home Stadium Shirt 2023-24', '$59.99')">View Product</button>
           </div>
 
           <div class="product">
         
-            <img src="foto/home kits/evertonhome.png" alt="Everton Jersey">
+            <img src="foto/home kits/evertonhome.png" alt="Everton Jersey" onclick="showProductDetails('foto/home kits/evertonhome.png','Everton Hummel Home Stadium Shirt 2023-24', '$59.99')">
           
             <h2>Everton </h2>
           
             <p>Everton Hummel Home Stadium Shirt 2023-24
             </p>
-            <p>Price: $89.99</p>
-            <button>Add to Cart</button>
+            <p>Price: $59.99</p>
+            <button onclick="showProductDetails('foto/home kits/evertonhome.png','Everton Hummel Home Stadium Shirt 2023-24', '$59.99')">View Product</button>
           </div>
 
 
           <div class="product">
         
-            <img src="foto/home kits/west-hamhome.png" alt="West Ham Jersey">
+            <img src="foto/home kits/west-hamhome.png" alt="West Ham Jersey" onclick="showProductDetails('foto/home kits/west-hamhome.png','West Ham Umbro Homw Stadium Shirt 2023-24', '$59.99')">
           
             <h2>West Ham </h2>
           
             <p>West Ham Umbro Homw Stadium Shirt 2023-24
             </p>
-            <p>Price: $89.99</p>
-            <button>Add to Cart</button>
+            <p>Price: $59.99</p>
+            <button onclick="showProductDetails('foto/home kits/west-hamhome.png','West Ham Umbro Homw Stadium Shirt 2023-24', '$59.99')">View Product</button>
           </div>
 
           <div class="product">
-            <img src="foto/home kits/manchester-cityhome.png" alt="Manchester C Jersey">
+            <img src="foto/home kits/manchester-cityhome.png" alt="Manchester C Jersey" onclick="showProductDetails('foto/home kits/manchester-cityhome.png','Manchester City Puma Home Shirt 2023-24', '$59.99')">
             <h2>Manchester City </h2>
             <p>Manchester City Puma Home Shirt 2023-24
             </p>
-            <p>Price: $89.99</p>
-            <button>Add to Cart</button>
+            <p>Price: $59.99</p>
+            <button onclick="showProductDetails('foto/home kits/manchester-cityhome.png','Manchester City Puma Home Shirt 2023-24', '$59.99')">View Product</button>
           </div>
 
           <div class="product">
         
-            <img src="foto/home kits/wolverhamptonhome.png" alt="Wolves Jersey">
+            <img src="foto/home kits/wolverhamptonhome.png" alt="Wolves Jersey" onclick="showProductDetails('foto/home kits/wolverhamptonhome.png','Wolverhampton Castore Home Shirt 2023-24', '$89.99')">
           
             <h2>Wolverhampton </h2>
             <p>Wolverhampton Castore Home Shirt 2023-24
             </p>
             <p>Price: $89.99</p>
-            <button>Add to Cart</button>
+            <button onclick="showProductDetails('foto/home kits/wolverhamptonhome.png','Wolverhampton Castore Home Shirt 2023-24', '$89.99')">View Product</button>
           </div>
 
           <div class="product">
         
-            <img src="foto/home kits/arsenalhome.png" alt="Arsenal Jersey">
+            <img src="foto/home kits/arsenalhome.png" alt="Arsenal Jersey" onclick="showProductDetails('foto/home kits/arsenalhome.png','Arsenal Adidas Home Shirt 2023-24', '$59.99')">
           
             <h2>Arsenal </h2>
             <p>Arsenal Adidas Home Shirt 2023-24
               <br>
               <br>
             </p>
-            <p>Price: $89.99</p>
-            <button>Add to Cart</button>
+            <p>Price: $59.99</p>
+            <button onclick="showProductDetails('foto/home kits/arsenalhome.png','Arsenal Adidas Home Shirt 2023-24', '$59.99')">View Product</button>
           </div>
 
         
           <div class="product">
         
-            <img src="foto/away kits/burnleyaway.png" alt="Burnley Jersey">
+            <img src="foto/away kits/burnleyaway.png" alt="Burnley Jersey" onclick="showProductDetails('foto/away kits/burnleyaway.png','Burnley Umbro Away Shirt 2023-24', '$39.99')">
           
             <h2>Burnley </h2>
             <p>Burnley Umbro Away Shirt 2023-24
                 <br>
               <br>
             </p>
-            <p>Price: $89.99</p>
-            <button>Add to Cart</button>
+            <p>Price: $39.99</p>
+            <button onclick="showProductDetails('foto/away kits/burnleyaway.png','Burnley Umbro Away Shirt 2023-24', '$39.99')">View Product</button>
           </div>
 
           <footer>
