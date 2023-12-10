@@ -102,7 +102,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         
   function showProductDetails(image, name, price) {
-      // Redirect to the product details page with query parameters
       window.location.href = `faqjaunike.html?image=${encodeURIComponent(image)}&name=${encodeURIComponent(name)}&price=${encodeURIComponent(price)}`;
   }
 
@@ -130,13 +129,11 @@ document.addEventListener('DOMContentLoaded', function () {
     if (errorMessages.length > 0) {
         alert(errorMessages.join("\n"));
     } else {
-        // Form is valid, you can submit it or perform other actions here
         alert("Form submitted successfully!");
     }
 }
 
 function isValidEmail(email) {
-    // Very basic email validation, you might want to use a more robust solution
     var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
 }
