@@ -99,6 +99,13 @@ document.addEventListener('DOMContentLoaded', function () {
             }
           });
         });
+
+        
+  function showProductDetails(image, name, price) {
+      // Redirect to the product details page with query parameters
+      window.location.href = `faqjaunike.html?image=${encodeURIComponent(image)}&name=${encodeURIComponent(name)}&price=${encodeURIComponent(price)}`;
+  }
+
         
 
       
