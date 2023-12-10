@@ -106,6 +106,41 @@ document.addEventListener('DOMContentLoaded', function () {
       window.location.href = `faqjaunike.html?image=${encodeURIComponent(image)}&name=${encodeURIComponent(name)}&price=${encodeURIComponent(price)}`;
   }
 
+  function validateForm() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
+
+    var errorMessages = [];
+
+    if (name.trim() === "") {
+        errorMessages.push("Name is required");
+    }
+
+    if (email.trim() === "") {
+        errorMessages.push("Email is required");
+    } else if (!isValidEmail(email)) {
+        errorMessages.push("Invalid email format");
+    }
+
+    if (message.trim() === "") {
+        errorMessages.push("Message is required");
+    }
+
+    if (errorMessages.length > 0) {
+        alert(errorMessages.join("\n"));
+    } else {
+        // Form is valid, you can submit it or perform other actions here
+        alert("Form submitted successfully!");
+    }
+}
+
+function isValidEmail(email) {
+    // Very basic email validation, you might want to use a more robust solution
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
         
 
       
