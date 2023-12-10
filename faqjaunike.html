@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <container>
+        <div class="logoja" >
+        
+            <img src="foto/logo.png.png" alt="logoja" onclick="goToHome()" >
+    
+        </div>
+        
+        <div class="returnandship" >
+        
+            <img src="foto/return&shipping.png" alt="returnandship" >
+        
+        </div class="navibar">
+        
+        <nav class="navibar">
+        
+            <ul>
+              
+                <li><a href="index.html">Home</a></li>
+              <li><a href="kits.html">Kits</a></li>
+              <li><a href="#">Apparel&Gear</a></li>
+              <li><a href="#">Special offers</a></li>
+            </ul>
+            
+            <div class="search-container">
+        
+              <input type="text" placeholder="Search...">
+              <button type="submit" class="search-button">
+              <img src="foto/searchicon.png" alt="Search Icon">
+         
+              </button>
+        
+            </div>
+        
+              <div class="profile-icon">
+                <a href="loginForm.html" target="_blank">
+                    <img src="foto/profile-icon.png" alt="Profile" width="50px" height="50px" style="border-radius: 50%"/>
+                </a>
+              </div>
+              
+          </nav>
+          <div class="discount-code" id="discountCodeContainer">
+            <img src="foto/discountcode.png" alt="Your Photo" id="discountCodePhoto" class="clickable-photo">
+          </div>
+        
+        </container>
+
+    <div class="product-details">
+            <img id="productImage" alt="Product Image">
+            
+            <div class="product-info">
+                <h1 id="productName"></h1>
+                <h2 id="productPrice"></h2>
+                <form method="post">
+                    <label for="size">Size:</label>
+                    <select id="size" name="size">
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                        <option value="x-large">X-Large</option>
+                    </select>
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1">
+                    <button type="submit" class="buy-now-button">Buy Now</button>
+                </form>
+                <p><h3>Shipping Policy:</h3> Standard shipping takes 3-5 business days, and expedited shipping is available for an additional cost. Please note that shipping times may vary based on your location.</p>
+                <p><h3>Description:</h3> Elevate your style with our premium product. Crafted with care, this product is designed for both comfort and fashion. Made from high-quality materials, it's perfect for any occasion.</p>
+            <form action="checkout.html" method="post">
+                <!-- Existing form elements -->
+            
+                <label for="bonusCode">Apply Bonus Code:</label>
+                <input type="text" id="bonusCode" name="bonusCode" placeholder="Enter code">
+                <button type="button" onclick="applyBonusCode()">Apply</button>
+            
+                <!-- Existing form elements -->
+            </form>
+        </div>
+   
+        </div>
+        
+
+    <script>
+        // Marrja e parametrave
+        const urlParams = new URLSearchParams(window.location.search);
+        const imageUrl = urlParams.get('image');
+        const productName = urlParams.get('name');
+        const productPrice = urlParams.get('price');
+
+        // Foto, emri, cmimi qe merren nga produkti
+        document.getElementById('productImage').src = imageUrl;
+        document.getElementById('productName').innerText = productName;
+        document.getElementById('productPrice').innerText = `Price: ${productPrice}`;
+
+        // Pjesa e promo code-it
+
+        function applyBonusCode() {
+        // Get the bonus code entered by the user
+        const bonusCode = document.getElementById('bonusCode').value;
+
+        // Check if the entered bonus code is "ubt"
+        if (bonusCode.toLowerCase() === 'ubt') {
+            // Bonus code is correct, perform the desired action
+            alert('Bonus code "ubt" applied successfully, 30% off your order!');
+            
+        } else {
+            
+            alert('Invalid bonus code. Please enter a valid code.');
+        }
+    }
+    
+    </script>
+
+<footer>
+
+    <div class="footer-content">
+         <div class="footer-section">
+             <h3>Payment Methods</h3>
+             <div class="payment-methods">
+                 <img src="foto/visa.png" alt="Visa">
+                 <img src="foto/mastercard.png" alt="Mastercard">
+                 <img src="foto/paypal.png" alt="PayPal">
+             </div>
+         </div>
+  
+         <div class="footer-section">
+             <h3>Contact</h3>
+             <p>Email: jersey@store.com</p>
+             <p>Phone: (+383) 0 44 123-456</p>
+             <p>Address: Rr. Kosova, Prizren 20000</p>
+             
+         </div>
+  
+         <div class="footer-section">
+             <h3>Social Media</h3>
+             <div class="social-links">
+                 <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+                 <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+                 <a href="https://twitter.com/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+             </div>
+         </div>
+     </div>
+     
+     <div class="copyright">
+         &copy; 2023  All Rights Reserved.
+     </div>
+  
+  </footer>
+
+</body>
+</html>
