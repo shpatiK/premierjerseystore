@@ -77,9 +77,8 @@ nav a:hover {
     justify-content: center;
 }
 
-.custom-heading {
-    
-    font-size: 1.2em; 
+.custom-heading h1 {
+    font-size: larger;
     margin-top: 30px; 
   }
 
@@ -89,22 +88,19 @@ nav a:hover {
     display: flex;
     justify-content: center;
     align-items:center;
-    margin-top: 20px;
+    margin-right: 200px;
 }
 
 input {
     padding: 8px;
     border: 1px solid #ccc;
-    width: 500px;
+    width: 200px;
     align-items: center;
 }
 
 .search-button {
-    background: none;
-    border: none;
-    padding: 0;
     cursor: pointer;
-    width: 50%;
+    height: auto;
 }
 .search-container div{
     display: flex;
@@ -113,8 +109,10 @@ input {
 }
 
 .search-container img {
-    width: 20px; 
-    height: 20px; 
+    width: 25px;
+    height: auto;
+    padding: 0%;
+    
 }
 
 .search-button::before {
@@ -147,7 +145,7 @@ input {
   
   .discount-code img {
     cursor: pointer;
-    max-width: 100%;
+    width: 100%;
   }
   
 
@@ -220,7 +218,7 @@ input {
   
   .product {
     background-color: #fff;
-    border: 1px solid #ddd;
+    border: 2px solid #ddd;
     border-radius: 5px;
     margin: 10px;
     padding: 15px;
@@ -269,6 +267,16 @@ input {
     margin-bottom: 10px;
 }
 
+.footer-section a {
+    color: #ffffff; 
+    text-decoration: none; 
+    font-weight: bold;
+}
+
+.footer-section a:hover{
+    text-decoration: underline;
+}
+
 .social-links {
     margin-top: 20px;
 }
@@ -292,4 +300,32 @@ input {
 
 .copyright {
     margin-top: 20px;
+}
+
+/* Faqja unike e produktit */
+
+.product-details {
+    display: flex;
+    align-items: center;
+    font-size: larger;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.product-details img {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    width: 45%; 
+    height: auto;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+.product-info {
+    max-width: 50%; 
+    padding: 0 50px; 
+    
+}
+
+#size {
+    font-size: large;
 }
